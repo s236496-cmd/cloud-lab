@@ -1,0 +1,23 @@
+
+services:
+  backend:
+    image: lamtrannhutkhoi/mern-backend:1.0
+    network_mode: bridge
+    dns:
+      - 8.8.8.8
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./mern-demo/.env
+    environment:
+      PORT: "5000"
+    restart: unless-stopped
+
+  frontend:
+    image: lamtrannhutkhoi/mern-frontend:2.0
+    network_mode: bridge
+    links:
+      - backend
+    ports:
+      - "5173:5173"
+    restart: unless-stopped

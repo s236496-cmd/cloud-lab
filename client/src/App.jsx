@@ -99,7 +99,7 @@ function App() {
     <main className="container">
       <header className="page-header">
         <p className="eyebrow">MERN STACK · DOCKER</p>
-        <h1>Quản lý sinh viên</h1>
+        <h1>Quản lý sinh viên - Version 2.0</h1>
         <p>React · Express · MongoDB Atlas</p>
       </header>
 
